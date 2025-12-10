@@ -1,4 +1,4 @@
-﻿# Technical Analysis Report  
+﻿# Technical Analysis Report  20251210
 ## GPT-5.1 “100KB File Read Limit” Issue  
 ### Root Cause Hypothesis: Token Resource Starvation in I/O Preprocessing Layer  
 Author: Hanamaruki  
