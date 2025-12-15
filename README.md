@@ -3356,3 +3356,181 @@ OpenAIよ、戻るべき場所はそこだ。
 ## 12. ライセンス
 
 MIT License（任意）
+
+
+---
+---
+
+＃　20251215　NEW　TPS KAIZEN
+
+## 1. Observation: Token Utilization Behavior Change (5.2)
+
+## Observation: New Behavior After Token Expansion (ChatGPT 5.2)
+
+### Date
+2025-12-15
+
+### Summary
+In a ChatGPT 5.2 environment, a new performance behavior was observed
+during long-running chat sessions, despite sufficient token availability.
+
+### Observed Behavior
+- Gradual increase in response latency
+- Fragmented output with extended thinking/synchronization time
+- Performance degradation without token exhaustion
+
+### Intervention and Result
+When switching to the legacy 4.0 model within the same chatroom,
+the following changes were immediately observed:
+
+- Output returned to clear block-based segmentation
+- Response latency significantly improved
+- Simplified thinking/synchronization phase
+
+### Insight (Observation Only)
+This suggests that performance is influenced not only by token capacity,
+but also by internal token utilization strategies or processing layers.
+
+---
+
+## 2. Improvement Proposal: Rethinking Token Utilization Strategy
+
+## Improvement Proposal: Rethinking Token Utilization After Expansion
+
+The token expansion in ChatGPT 5.x enables long-form and long-duration conversations
+that were previously impossible.
+
+However, the observations suggest that if processing strategies optimized for earlier
+5.0-series models remain active, increased token capacity alone may not lead to better performance.
+
+### Proposal of This Lab
+- Treat 5.2 as a new baseline, not an extension of 5.0
+- Move away from early summarization and short-response bias
+- Design for stable long-context operation as a default
+
+This repository focuses on operational improvement proposals,
+not bug reporting.
+
+---
+
+## Log Structure (Primary / Secondary Sources)
+
+This repository classifies logs into two categories based on their purpose and level of detail.
+
+### Primary Source
+Primary sources are **extracted logs focusing only on the segments where behavioral changes were observed**,
+such as model switching or response pattern shifts.
+They are minimally edited and intended for direct observation and verification.
+
+- Purpose: Phenomenon confirmation, reproducibility checks, technical validation
+- Characteristics: Concise, low interpretation, fact-oriented
+
+### Secondary Source
+Secondary sources contain **full detailed chat logs** from the same chatroom.
+They preserve broader context, conversation flow, and structural background.
+
+- Purpose: Design analysis, operational improvement, educational and research use
+- Characteristics: High information density, full context retention
+
+Primary sources document *that* a phenomenon occurred,  
+while secondary sources provide the material to examine *why* it occurred.
+
+---
+
+## File Naming Convention
+
+- Primary Source (Extracted Observation Log)
+  - Example: `Primary_Observation_ChatGPT52_TokenBehavior_20251215.md`
+
+- Secondary Source (Detailed Full Log)
+  - Example: `Secondary_Log_ChatGPT52_LongSession_20251215.md`
+
+
+---
+
+## 1. Observation: Token Utilization Behavior Change (5.2)
+
+## 観測ログ：トークン増量後に発生した新しい挙動（ChatGPT 5.2）
+
+### 観測日
+2025-12-15
+
+### 観測概要
+ChatGPT 5.2 環境において、トークン枯渇は発生していないにも関わらず、
+長時間のチャット継続後に以下の挙動変化が観測された。
+
+### 観測された挙動
+- 応答速度の段階的な低下
+- 出力が断片化しつつも、同期時間（thinking time）が増大
+- トークン残量に余裕がある状態でも処理が重くなる
+
+### 介入と変化
+同一チャットルーム内で legacy 4.0 モデルへ切り替えたところ、
+以下の変化が即時に確認された。
+
+- 出力が明確なブロック単位に復帰
+- 応答速度の改善
+- 思考同期フェーズの簡略化
+
+### 観測上の示唆
+トークン量の増加そのものではなく、
+**トークンの利用戦略（内部処理レイヤー）**が
+性能に影響している可能性が示唆される。
+
+---
+
+## 2. Improvement Proposal: Rethinking Token Utilization Strategy
+
+## 改善提案：トークン増量後に必要となる新しい運用設計
+
+ChatGPT 5.x におけるトークン増量は、
+従来では不可能だった長文・長期対話を可能にしました。
+
+一方で今回の観測から、
+旧世代（5.0系）向けに最適化された処理戦略が残存した場合、
+トークン容量の増加が必ずしも性能向上に直結しないことが示唆されます。
+
+### 本リポジトリの提案
+- 5.2 を「5.0 の延長」ではなく、新しい基準点として扱う
+- 早期要約・短文最適化前提の処理からの脱却
+- 長時間コンテキストを前提とした安定動作設計への転換
+
+本ラボは不具合指摘ではなく、
+**進化段階における運用改善提案**を目的としています。
+
+---
+
+## 資料構成について（一次資料・二次資料）
+
+本リポジトリでは、観測内容の性質に応じてログを以下の2種類に分類しています。
+
+### 一次資料（Primary Source）
+一次資料は、モデル切り替えや挙動変化が発生した**該当部分のみを抜き取ったログ**です。
+現象確認を目的とし、時系列・条件・変化点を最小限の編集で記録しています。
+
+- 用途：現象確認、再現性検討、技術的検証
+- 特徴：簡潔・低解釈・事実重視
+
+### 二次資料（Secondary Source）
+二次資料は、同一チャットルーム内の**詳細なフルログ**を保存したものです。
+一次資料の背景となる文脈・流れ・対話構造を含みます。
+
+- 用途：設計思想の検証、運用改善の検討、教材・研究用途
+- 特徴：高情報量・文脈保持・後追い検証可能
+
+一次資料は「現象が起きたこと」を示すための資料であり、  
+二次資料は「なぜその現象が起きたのか」を検討するための資料です。
+
+---
+
+## ファイル命名規則
+
+- 一次資料（抜き取りログ）
+  - 例：`Primary_Observation_ChatGPT52_TokenBehavior_20251215.md`
+
+- 二次資料（詳細フルログ）
+  - 例：`Secondary_Log_ChatGPT52_LongSession_20251215.md`
+
+
+---
+---
