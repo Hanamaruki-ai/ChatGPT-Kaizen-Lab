@@ -3534,3 +3534,118 @@ ChatGPT 5.x におけるトークン増量は、
 
 ---
 ---
+
+Observation Log – Phase 2
+Silent Update Behavior (Late Integration Phase)
+
+Date: 2025-12-22 (Mon) ※実際の日付に置き換えてください
+
+Overview
+
+Following the previously observed silent update period,
+a second phase of integration-related behavior was observed.
+This entry records the behavior as an observation log only.
+
+Observed Behavior (Phase 2)
+
+During the weekend through early Monday, the following instability was observed:
+
+Partial or failed ingestion of large text files (over ~300 KB)
+
+Processing continued under the assumption that files were fully read
+
+Unstable URL access or apparent URL-read assumptions
+
+Around Monday, approximately 10:00 AM (JST), behavior noticeably stabilized:
+
+A ~879 KB text file was successfully ingested and verified
+
+A ~346 KB document no longer triggered mid-document output starts
+(i.e., processing no longer began partway through the document)
+
+Notes (Observational, Non-Evaluative)
+
+These behaviors appear consistent with
+internal integration processes (e.g., memory, retrieval, indexing transitions)
+rather than UI-level issues.
+
+Of particular note:
+
+Failure to detect incomplete ingestion while continuing processing
+
+Potential risk amplification if combined with autonomous or unsupervised agent execution
+
+This entry is recorded as a time-based observation,
+not as a conclusion or request for action.
+
+Positioning
+
+Phase 1: Initial to mid-period instability during silent update
+
+Phase 2: Recovery and stabilization behavior observed during late integration
+
+Future recurrences, if observed, will be logged as subsequent phases
+
+Optional Filename Suggestions
+
+silent_update_observation_2025-12-22_phase2.md
+
+
+---
+
+第2弾 観測ログ
+サイレントアップデート（統合終盤と思われる挙動）
+
+Date: 2025-12-22（月） ※実際の日付に置き換えてください
+
+観測概要
+
+前回のサイレントアップデート期間に続き、
+第2弾と見られる統合挙動を観測したため、記録として追記する。
+
+観測された主な挙動（第2弾）
+
+週末〜月曜午前にかけて、以下の不安定挙動を再確認
+
+大容量テキスト（300KB超）の読み込み失敗、または部分読み込み
+
+読み込み失敗にもかかわらず「全て読めた前提」で処理が進行
+
+URL参照が不安定、もしくは参照錯覚が発生
+
+月曜10時前後を境に、挙動が明確に改善
+
+約879KBのテキストを正常に読み込み、内容確認が可能
+
+346KBドキュメントにおいて、途中から書き始める挙動が消失
+
+所感（評価ではなく記録）
+
+本挙動は、UI不具合というよりも
+内部統合（memory / retrieval / index系）の切り替え過程に起因する
+サイレントアップデート特有の現象と考えられる。
+
+特に以下の点は、エージェント運用と組み合わさった場合に注意が必要：
+
+読み込み失敗を検知できないまま処理が継続される点
+
+無人稼働・自律処理において、誤前提が連鎖する可能性
+
+本記録は、問題提起や結論を目的とするものではなく、
+時系列上の観測ログとして残す。
+
+位置づけ
+
+第1弾：サイレントアップデート初期〜中盤の不安定挙動
+
+第2弾：統合終盤に向けた回復過程の観測ログ（本追記）
+
+今後、同様の挙動が再発した場合は、
+第3弾として追記予定。
+
+（任意）ファイル名案
+
+silent_update_observation_2025-12-22_phase2.md
+
+---
+---
