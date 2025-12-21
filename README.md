@@ -3590,6 +3590,7 @@ Optional Filename Suggestions
 
 silent_update_observation_2025-12-22_phase2.md
 
+The observed instability began around Fri, Dec 19, ~23:00 JST and stabilized by Mon, Dec 22, ~08:45 JST, consistent with a weekend silent update and integration cycle.
 
 ---
 
@@ -3643,7 +3644,7 @@ URL参照が不安定、もしくは参照錯覚が発生
 今後、同様の挙動が再発した場合は、
 第3弾として追記予定。
 
-（任意）ファイル名案
+ファイル名
 
 silent_update_observation_2025-12-22_phase2.md
 
